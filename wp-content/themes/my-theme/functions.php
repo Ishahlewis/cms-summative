@@ -5,6 +5,7 @@ function enqueue_function(){
 
     wp_enqueue_style('fontawesome','https://use.fontawesome.com/releases/v5.8.1/css/all.css');
     wp_enqueue_style('purecss','https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+    wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Montserrat&display=swap' );
     wp_enqueue_style( 'style', get_template_directory_uri().'/css/style.css' );
 
     wp_deregister_script( 'jquery' );
@@ -47,6 +48,14 @@ function register_resources(){
 }
 
 add_action('init','register_resources');
+
+// Prevent WP from adding <p> tags on all post types
+function disable_wp_auto_p( $content ) {
+  remove_filter( 'the_content', 'wpautop' );
+  remove_filter( 'the_excerpt', 'wpautop' );
+  return $content;
+}
+add_filter( 'the_content', 'disable_wp_auto_p', 0 );
 
 
 

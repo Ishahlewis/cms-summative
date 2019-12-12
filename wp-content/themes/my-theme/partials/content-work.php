@@ -14,6 +14,5 @@
                 <p><?php the_content() ?></p>
             </a>
         </div>
-    
-    
+
 </div>

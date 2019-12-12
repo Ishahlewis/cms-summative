@@ -1,17 +1,28 @@
+@font-face {
+  font-family: 'lafentharegular';
+  src: url("lafentha_demo-webfont.woff2") format("woff2"), url("lafentha_demo-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 * {
   padding: 0;
   margin: 0;
   list-style-type: none; }
 
-body h1 {
-  font-family: 'Sinkin Sans', serif;
-  font-size: 2em; }
-body h2 {
-  font-family: 'Sinkin Sans', serif;
-  font-size: 1.2em;
+body #menu-item-30, body #menu-item-29, body #menu-item-28:not(.sub-menu) {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3em;
   font-weight: bolder; }
 body p {
-  font-family: 'Sinkin Sans', serif; }
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em; }
+body .sub-menu li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6em;
+  font-weight: lighter; }
+body h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  font-weight: bolder; }
 
 .wrapper {
   min-height: 100vh;
@@ -37,7 +48,7 @@ body p {
           font-weight: bold;
           color: black;
           text-decoration: none;
-          font-family: 'Lafentha', serif;
+          font-family: 'lafentharegular';
           letter-spacing: 1px;
           text-transform: lowercase; }
       .wrapper header .menu .back-up {
@@ -55,20 +66,14 @@ body p {
           display: block;
           line-height: 2em;
           padding: .8em;
-          font-weight: bold; }
+          font-weight: bold;
+          letter-spacing: 1px; }
           .wrapper header .menu .nav li a {
             text-decoration: none;
             color: black;
-            font-family: 'Sinkin Sans', serif;
-            font-size: .7em;
             letter-spacing: 1px; }
             .wrapper header .menu .nav li a:hover {
               color: #ccc; }
-        .wrapper header .menu .nav .sub-li, .wrapper header .menu .nav .sub-menu li {
-          font-size: 1em;
-          letter-spacing: 1px;
-          color: #ccc;
-          font-weight: lighter; }
   .wrapper .main {
     min-height: auto;
     padding: 2em 1em 2em 1em; }
@@ -82,11 +87,12 @@ body p {
     z-index: 100; }
     .wrapper .footer ul {
       display: flex; }
-      .wrapper .footer ul a {
+      .wrapper .footer ul .fa-instagram {
         color: black;
-        font-size: 1.2em;
+        font-size: 2em;
         flex: 0 0 10%;
-        margin-right: .6em; }
+        margin-right: .6em;
+        font-weight: lighter; }
 
 @media only screen and (min-width: 60em) {
   .wrapper {
@@ -99,7 +105,7 @@ body p {
       position: fixed;
       top: 5em;
       left: 0;
-      width: 12em;
+      width: 10em;
       z-index: 100;
       background-color: transparent;
       padding: 1em 2em; }
@@ -119,16 +125,12 @@ body p {
           .wrapper header .menu .nav li {
             flex: 1 0 90%;
             min-height: 1em;
-            font-size: 1.2em;
             padding: .5em 0; }
           .wrapper header .menu .nav .back-up {
             display: none; }
-          .wrapper header .menu .nav .sub-li, .wrapper header .menu .nav .sub-menu li {
-            font-size: .6em;
-            letter-spacing: 1px; }
     .wrapper .main {
       min-width: 85%;
-      margin-left: 15em; } }
+      margin-left: 14em; } }
 .main .container-about {
   padding: 1em; }
   .main .container-about .about-head {
@@ -160,22 +162,14 @@ body p {
   .main .container-contact .contact-head {
     height: 3em;
     margin-top: 6em;
-    margin-right: 2em;
-    font-family: 'Sinkin Sans', serif;
-    font-weight: bolder; }
-    .main .container-contact .contact-head h2 {
-      font-weight: lighter; }
-    .main .container-contact .contact-head p {
-      font-weight: lighter;
-      font-size: .8em;
-      margin-top: 2em; }
+    margin-right: 2em; }
   .main .container-contact .contact-section {
     margin-top: 1px;
-    font-family: 'Sinkin Sans', serif;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-wrap: wrap; }
     .main .container-contact .contact-section .form-box {
-      font-family: 'Sinkin Sans', serif;
+      font-family: 'Montserrat', sans-serif;
       flex: 1 0 90%; }
       .main .container-contact .contact-section .form-box p {
         line-height: 1.5em;
@@ -196,8 +190,8 @@ body p {
             padding: 2em 1em 2em 0;
             border-bottom: 1px dotted black; }
             .main .container-contact .contact-section .form-box .form .form-items input::placeholder, .main .container-contact .contact-section .form-box .form .form-items textarea::placeholder {
-              font-family: 'Sinkin Sans', serif;
-              font-size: 1em; }
+              font-family: 'Montserrat', sans-serif;
+              font-size: 1.2em; }
             .main .container-contact .contact-section .form-box .form .form-items input:focus-within, .main .container-contact .contact-section .form-box .form .form-items textarea:focus-within {
               outline: none;
               background-color: none; }
@@ -207,7 +201,7 @@ body p {
             text-align: center;
             background-color: black;
             color: white;
-            font-family: 'Sinkin Sans', serif;
+            font-family: 'Montserrat', sans-serif;
             font-weight: lighter;
             font-size: .8em;
             padding: .8em;
@@ -217,13 +211,12 @@ body p {
               background-color: #ccc; }
       .main .container-contact .contact-section .form-box .social {
         display: flex;
-        margin-top: 1em;
         flex-wrap: wrap;
         font-weight: bolder;
-        margin-bottom: 3em; }
+        margin-bottom: 3em;
+        margin-top: 1em; }
         .main .container-contact .contact-section .form-box .social h2 {
           flex: 0 0 100%;
-          font-weight: lighter;
           font-size: 1em;
           margin-bottom: 1em; }
         .main .container-contact .contact-section .form-box .social .icons {
@@ -256,18 +249,13 @@ body p {
     margin-left: 0; }
   .wrapper .main .container-contact .contact-section {
     margin-top: 1px;
-    font-family: 'Sinkin Sans', serif;
     display: flex;
     margin-bottom: 5em; }
     .wrapper .main .container-contact .contact-section .form-box {
-      font-family: 'Sinkin Sans', serif;
       flex: 0 0 80%;
       background-color: white;
       margin-top: 1px;
       padding: 0 1em 1em 0; }
-      .wrapper .main .container-contact .contact-section .form-box p {
-        line-height: 1.5em;
-        margin-bottom: 1em; }
       .wrapper .main .container-contact .contact-section .form-box .form {
         padding: 0 0 2em 0; }
         .wrapper .main .container-contact .contact-section .form-box .form .form-items {
@@ -279,8 +267,8 @@ body p {
             padding: 2em 1em 2em 0;
             border-bottom: 1px dotted black; }
             .wrapper .main .container-contact .contact-section .form-box .form .form-items input::placeholder, .wrapper .main .container-contact .contact-section .form-box .form .form-items textarea::placeholder {
-              font-family: 'Sinkin Sans', serif;
-              font-size: 1em; }
+              font-family: 'Montserrat', sans-serif;
+              font-size: 1.3em; }
             .wrapper .main .container-contact .contact-section .form-box .form .form-items input:focus-within, .wrapper .main .container-contact .contact-section .form-box .form .form-items textarea:focus-within {
               outline: none;
               background-color: none; }
@@ -289,7 +277,7 @@ body p {
             margin-left: 0;
             background-color: black;
             color: white;
-            font-family: 'Sinkin Sans', serif;
+            font-family: 'Montserrat', sans-serif;
             font-weight: lighter;
             font-size: .8em;
             padding: .8em;
@@ -299,11 +287,9 @@ body p {
               background-color: #ccc;
               color: black; }
     .wrapper .main .container-contact .contact-section .social {
-      margin-top: 2.5em;
+      margin-top: 1em;
       display: flex;
       flex-wrap: wrap; }
-      .wrapper .main .container-contact .contact-section .social p {
-        flex: 0 0 100%; }
       .wrapper .main .container-contact .contact-section .social .icons {
         background-color: #ccc;
         color: black;
@@ -376,7 +362,7 @@ body p {
               position: absolute;
               top: 5em;
               left: 2.5em;
-              width: 100%; }
+              width: 85%; }
         .main .container-work .work-section .img-group-one .cont:hover > .text-work {
           opacity: 1; }
 
@@ -429,7 +415,7 @@ body p {
             position: absolute;
             top: 5em;
             left: 2.5em;
-            width: 100%; }
+            width: 85%; }
       .main .container-work .work-section .img-group-one .cont:hover > .text-work {
         opacity: 1; } }
 @media only screen and (min-width: 60em) {
@@ -484,7 +470,7 @@ body p {
               position: absolute;
               top: 5em;
               left: 2.5em;
-              width: 100%; }
+              width: 85%; }
         .wrapper .main .container-work .work-section .img-group-one .cont:hover > .text-work {
           opacity: 1; } }
 

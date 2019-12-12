@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'lafentharegular';
+    src: url('lafentha_demo-webfont.woff2') format('woff2'),
+         url('lafentha_demo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 *{
 	padding:0;
 	margin:0;
@@ -6,20 +15,29 @@
 
 body{
 
-    h1{
-        font-family: 'Sinkin Sans', serif;
-        font-size: 2em;
-    }
-
-    h2{
-        font-family: 'Sinkin Sans', serif;
-        font-size: 1.2em;
+    #menu-item-30, #menu-item-29, #menu-item-28:not(.sub-menu){
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.3em;
         font-weight: bolder;
     }
 
     p{
-        font-family: 'Sinkin Sans', serif;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1em;
     }
+    
+    .sub-menu li{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.6em;
+        font-weight: lighter;
+    }
+
+    h2{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5em;
+        font-weight: bolder;
+    }
+
 }
 
 // EVERYTHING CODE
@@ -53,7 +71,7 @@ body{
                 font-weight: bold;
                 color: black;
                 text-decoration: none;
-                font-family: 'Lafentha', serif;
+                font-family: 'lafentharegular';
                 letter-spacing: 1px;
                 text-transform: lowercase;
                 }
@@ -83,12 +101,11 @@ body{
                     line-height: 2em;
                     padding: .8em;
                     font-weight: bold;
+                    letter-spacing: 1px;
     
                     a{
                         text-decoration: none;
                         color: black;
-                        font-family: 'Sinkin Sans', serif;
-                        font-size: .7em;
                         letter-spacing: 1px;
 
                         &:hover{
@@ -96,14 +113,6 @@ body{
                         }
                     }
                     
-                }
-
-
-                .sub-li,.sub-menu li{
-                    font-size:1em;
-                    letter-spacing: 1px;
-                    color: #ccc;
-                    font-weight: lighter;
                 }
 
             }
@@ -128,11 +137,12 @@ body{
         ul{
             display: flex;
             
-            a{
+            .fa-instagram{
                 color: black;
-                font-size: 1.2em;
+                font-size: 2em;
                 flex: 0 0 10%;
                 margin-right: .6em;
+                font-weight: lighter;
             }
         }
     }
@@ -157,7 +167,7 @@ body{
         position: fixed;
         top: 5em;
         left: 0;
-        width: 12em;
+        width: 10em;
         z-index: 100;
         background-color: transparent;
         padding: 1em 2em;
@@ -184,17 +194,12 @@ body{
                 li{
                     flex: 1 0 90%;
                     min-height: 1em;
-                    font-size: 1.2em;
                     padding: .5em 0;
+
                 }
 
                 .back-up{
                     display: none;
-                }
-
-                .sub-li,.sub-menu li{
-                    font-size:.6em;
-                    letter-spacing: 1px;
                 }
     
             }
@@ -203,7 +208,7 @@ body{
 
     .main{
         min-width: 85%;
-        margin-left:15em;
+        margin-left:14em;
     }
 
 
